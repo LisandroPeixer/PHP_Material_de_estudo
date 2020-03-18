@@ -1,0 +1,8 @@
+C:\projetos\miniframework\public	//local do servidor
+
+php -S localhost:8080			//comando para ligar servidor root
+
+php composer.phar install		//iniciar composer
+
+
+

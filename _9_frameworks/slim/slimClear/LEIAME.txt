@@ -1,0 +1,44 @@
+-----------[SKELETON]--------------------------
+ 1 - instalar composer de 'https://getcomposer.org/download/' na pasta slim
+ 2 - instalar SLIM de 'http://www.slimframework.com/docs/v4/start/installation.html' na pasta slim
+ 3 - usar comando '$ php composer.phar create-project slim/slim-skeleton [my-app-name]' 
+ 				  '$ php composer.phar create-project slim/slim-skeleton --prefer-dist[my-app-name]'	
+ 		de http://www.slimframework.com/
+ 4 - subir uma pasta o conteudo de slim-skeleton
+ 5 - usar comando '$ cd [my-app-name]; php -S localhost:8080 -t public public/index.php' 
+ 		na pasta public para ligar servidor
+
+-----------[BANCO DE DADOS]--------------------- 		
+ 6 - usar comando 'echo __DIR__." ++ "; //caminho do diretorio public' na pasta public/index.php
+ 7 - utilizar comando 'chmod 777' na pasta logs com git-bash 	
+ 8 - instalar illuminate com o comando 'php composer.phar require illuminate/database' na pasta slim
+ 9 - definir 'db =>[]' em settings.php	
+ 10 - criar db.php 
+ 11 - abrir dependencia de 'db' em src/dependecies.php
+ 12 - criar banco de dados 'slim' no MYSQL 
+ 13	- executar comando 'php db.php' via CMD para inserir tabelas no banco de dados
+ 14 - em routes.php criar pasta routes + produtos.php 
+ 15 - direcionar routes.php para produtos.php
+ 16 - iniciar rotas em src/routes/produtos.php
+
+
+-----------[CRUD]------------------------------
+ORM
+1 - criar Produto.php em App/Models
+2 - adicionar $container->get('db'); em public/index.php 
+3 - alterar para $table->timestamps(); ('created_at' / 'updated_at') em db.php
+
+
+-----------[CORS]-----------------------------
+
+AJAX
+1 - abrir $app->options em src/routes.php
+2 - abrir src/middleware.php
+3 - abrir $app->map em src/routes.php
+
+AUTENTICACAO
+4 - abrir /routes/autenticacao.php em src/routes.php
+5 - criar autenticacao.php em src/routes
+6 - criar Usuario.php em Models
+7 - abrir secretKey em src/settings.php
+8 - https://github.com/tuupola/slim-jwt-auth 

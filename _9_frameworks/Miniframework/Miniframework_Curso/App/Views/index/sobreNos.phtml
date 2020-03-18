@@ -1,0 +1,27 @@
+<!-- 3 - viemos de index controller.php para a view que é a pagina que será carregada com as solicitações para o usuario-->
+<h1>Sobre Nos</h1>
+<hr>
+<!--estilo html-->
+<?php foreach ($this->view->dados as $series => $info){ ?>
+
+	<h1><?= $info['titulo'] ?></h1>
+	<br>
+	<p><?= $info['descricao'] ?></p>
+	<hr> 
+
+<?php } ?>
+
+<?php
+	//estilo php 	
+	/*
+	echo '<pre>';
+	print_r($this->view->dados);
+	echo '</pre>'; 
+	
+	//echo 'Passamos de IndexController e disparamos a action sobreNos na View<hr>';
+
+	foreach ($this->view->dados as $series => $info){
+		echo $info['titulo'].'<br>'.$info['descricao'].'<hr>';
+	}
+	*/
+?>

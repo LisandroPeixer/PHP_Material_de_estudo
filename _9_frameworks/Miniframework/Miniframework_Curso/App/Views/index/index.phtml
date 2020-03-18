@@ -1,0 +1,20 @@
+<!-- 3 - viemos de index controller.php para a view que é a pagina que será carregada com as solicitações para o usuario
+	 4.3 - fazendo foreach pela classe $produto e capturando os atributos -->
+<h1>Index</h1>
+<hr>
+
+<?php  
+	
+	//ini_set('error_reporting', 'E_STRICT');//retira warning
+	/*
+	echo '<pre>';
+	print_r($this->view->dados);
+	echo '</pre>';
+	*/
+	//echo 'Passamos de IndexController e disparamos a action index na View<hr>';
+	foreach ($this->view->dados as $indice => $produto) {
+		//echo '<br>'.$valor;
+		echo $produto['id'].' | '.$produto['descricao'].' | '.$produto['preco'].'<br>';
+	}
+
+?>
